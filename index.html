@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=920">
+    <meta name="viewport" content="width=1024">
     <title>Nostr Keyring</title>
     <link rel="icon" href="nostrkeyring.svg"/>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
@@ -44,37 +44,39 @@
     <a href="/" id="main-logo"></a>
     <div id="page_wrapper">
       <section class="page_container">
-        <div class="z-20 interactive_header relative" data-component="agency_header">
-          <div class="absolute flex flex-col justify-center items-center min-h-screen w-full">
-            <h1 draggable="false" class="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+        <div class="interactive_header relative" data-component="agency_header">
+
+          <div class="absolute flex flex-col justify-center items-center min-h-full w-full">
+            <h1 draggable="false" class="text-3xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 Nostr Keyring
             </h1>
-            <img draggable="false" src="nostrkeyring.svg" class="w-24 h-24 mb-6" alt=""/>
-            <div class="bg-purple-800 bg-opacity-50 p-8 rounded-lg shadow-lg mb-12">
-              <video width="640" height="360" controls>
+            <img draggable="false" src="nostrkeyring.svg" class="w-16 h-16 mb-6" alt=""/>
+            <div class="bg-purple-800 bg-opacity-50 p-8 rounded-2xl shadow-lg">
+              <video width="320" height="180" controls>
                 <source src="coming-soon.webm" type="video/webm">
                 Your browser does not support the video tag.
               </video>
-              <h2 draggable="false" class="text-3xl font-bold mb-4 italic text-center mt-10 text-purple-300">Download the browser extension</h2>
+              <h2 draggable="false" class="text-3xl font-bold mb-4 italic text-center mt-4 text-purple-300">Download</h2>
               <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" rel="noopener noreferrer me" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-                  <img draggable="false" src="firefox.svg" class="w-12 h-12" alt=""/>
+                <a href="#" rel="noopener noreferrer me" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                  <img draggable="false" src="firefox.svg" class="w-10 h-10" alt=""/>
                 </a>
-                <a href="#" rel="noopener noreferrer me" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-                  <img draggable="false" src="chrome.svg" class="w-12 h-12" alt=""/>
+                <a href="#" rel="noopener noreferrer me" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                  <img draggable="false" src="chrome.svg" class="w-10 h-10" alt=""/>
                 </a>
-                <a href="#" rel="noopener noreferrer me" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-                  <img draggable="false" src="safari.svg" class="w-12 h-12" alt=""/>
+                <a href="#" rel="noopener noreferrer me" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold p-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                  <img draggable="false" src="safari.svg" class="w-10 h-10" alt=""/>
                 </a>
               </div>
             </div>
-            <p draggable="false" class="mb-4 text-purple-300">
+            <p draggable="false" class="my-4 text-purple-300">
               Don't trust, verify.
             </p>
-            <a href="https://github.com/dankswoops/NostrKeyring" rel="noopener noreferrer me" target="_blank" class="rounded-full bg-white w-14 h-14 flex items-center justify-center  transition duration-300 ease-in-out transform hover:scale-105">
-              <img src="github.svg" class="w-12 h-12" alt=""/>
+            <a href="https://github.com/dankswoops/NostrKeyring" rel="noopener noreferrer me" target="_blank" class="rounded-full bg-white w-12 h-12 flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105">
+              <img src="github.svg" class="w-10 h-10" alt=""/>
             </a>
           </div>
+          
         </div>
         <div class="page_content"><div class="page_content-inner"></div></div>
       </section>
@@ -92,7 +94,6 @@
               const timeElapsed = currentTime - startTime;
               const progress = Math.min(timeElapsed / duration, 1);
               window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
-  
               if (timeElapsed < duration) {
                   requestAnimationFrame(animation);
               }
